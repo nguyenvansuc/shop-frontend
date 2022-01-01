@@ -1,0 +1,82 @@
+.signIn {
+  width: 100%;
+  padding: 30px;
+  .signInForm {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    div {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      label {
+        text-align: start;
+        font-size: 22px;
+      }
+      input {
+        height: 35px;
+        border: 0;
+        border-bottom: 2px solid black;
+      }
+      input:focus {
+        outline: none;
+      }
+    }
+    h3 {
+      cursor: pointer;
+      text-align: start;
+      margin-top: 10px;
+    }
+    h1 {
+      text-align: start;
+    }
+  }
+}
+
+@media only screen and (max-width: 416px) {
+  .signIn {
+    width: 100%;
+    padding: 30px;
+    h1 {
+      font-size: 22px;
+      font-weight: 600;
+    }
+    .signInForm {
+      width: 90%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      div {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        label {
+          text-align: start;
+          font-size: 16px;
+          font-weight: 600;
+        }
+        input {
+          height: 35px;
+          border: 0;
+          border-bottom: 2px solid black;
+        }
+        input:focus {
+          outline: none;
+        }
+      }
+      h3 {
+        cursor: pointer;
+        text-align: start;
+        margin-top: 10px;
+      }
+      h1 {
+        text-align: start;
+      }
+    }
+  }
+}

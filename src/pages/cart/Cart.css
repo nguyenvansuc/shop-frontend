@@ -1,0 +1,116 @@
+.cart {
+  width: 100%;
+}
+
+.cart .cartForm {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.cart .cartForm .cartDetails {
+  margin-bottom: 20px;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  font-size: 14px;
+  position: relative;
+  cursor: pointer;
+}
+
+.cart .cartForm .cartDetails div span {
+  margin: 0 20px;
+}
+
+.cartProduct {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.cartUsername {
+  color: darkred;
+  font-weight: 600;
+}
+
+.cartAddress {
+  font-weight: 700;
+}
+
+.cartNumberProduct {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.cartTotalPrice {
+  font-size: 20px;
+  font-weight: 500;
+  color: darkred;
+}
+
+.cartButton {
+  width: 70px;
+  background-color: darkred;
+  color: white;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.cartButton:hover {
+  background-color: darkcyan;
+}
+
+@media only screen and (max-width: 416px) {
+  .cart {
+    width: 100%;
+  }
+  .cart .cartForm {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  .cart .cartForm .cartDetails {
+    margin-bottom: 20px;
+    -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+  }
+  .cart .cartForm .cartDetails div span {
+    margin: 0 5px;
+  }
+  .cartProduct {
+    font-size: 16px;
+  }
+  .cartUsername {
+    color: darkred;
+    font-weight: 600;
+  }
+  .cartAddress {
+    font-weight: 700;
+    font-size: 12px;
+  }
+  .cartNumberProduct {
+    font-size: 12px;
+    margin: 0 5px;
+  }
+  .cartTotalPrice {
+    font-size: 12px;
+    font-weight: 600;
+    color: darkred;
+    margin: 0 5px;
+  }
+  .cartStatus {
+    font-size: 12px;
+    margin: 0;
+  }
+  .cartButton {
+    width: 50px;
+    font-size: 12px;
+  }
+  .cartButton:hover {
+    background-color: darkcyan;
+  }
+}
+/*# sourceMappingURL=Cart.css.map */

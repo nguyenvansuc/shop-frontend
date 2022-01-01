@@ -1,0 +1,102 @@
+.signIn {
+  width: 100%;
+  padding: 30px;
+}
+
+.signIn .signInForm {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.signIn .signInForm div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 20px;
+}
+
+.signIn .signInForm div label {
+  text-align: start;
+  font-size: 22px;
+}
+
+.signIn .signInForm div input {
+  height: 35px;
+  border: 0;
+  border-bottom: 2px solid black;
+}
+
+.signIn .signInForm div input:focus {
+  outline: none;
+}
+
+.signIn .signInForm h3 {
+  cursor: pointer;
+  text-align: start;
+  margin-top: 10px;
+}
+
+.signIn .signInForm h1 {
+  text-align: start;
+}
+
+@media only screen and (max-width: 416px) {
+  .signIn {
+    width: 100%;
+    padding: 30px;
+  }
+  .signIn h1 {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .signIn .signInForm {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  .signIn .signInForm div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 20px;
+  }
+  .signIn .signInForm div label {
+    text-align: start;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .signIn .signInForm div input {
+    height: 35px;
+    border: 0;
+    border-bottom: 2px solid black;
+  }
+  .signIn .signInForm div input:focus {
+    outline: none;
+  }
+  .signIn .signInForm h3 {
+    cursor: pointer;
+    text-align: start;
+    margin-top: 10px;
+  }
+  .signIn .signInForm h1 {
+    text-align: start;
+  }
+}
+/*# sourceMappingURL=SignIn.css.map */

@@ -1,0 +1,93 @@
+.mobileMainBanner {
+  display: none;
+}
+
+.home-banner {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.home-banner h2 {
+  color: #07080a;
+}
+
+.home-banner h2 span {
+  margin: 0 10px;
+  font-size: 32px;
+  color: #0e243c;
+}
+
+.home-banner h2 svg {
+  margin: 0 10px;
+}
+
+.home-product {
+  width: 100%;
+  padding: 10px;
+}
+
+.home-product img {
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 3px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.home-product img:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+@media only screen and (max-width: 416px) {
+  .mainBanner {
+    display: none;
+  }
+  .mobileMainBanner {
+    display: block;
+    width: 100%;
+    position: relative;
+  }
+  .mobileMainBanner img {
+    width: 100%;
+  }
+  .mobileMainBanner h2 {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 600;
+    top: 39%;
+  }
+  .home-banner {
+    width: 90%;
+    margin: 20px auto;
+  }
+  .home-banner h2 {
+    font-size: 14px;
+  }
+  .home-banner h2 span {
+    margin: 0 10px;
+    font-size: 18px;
+    color: #0e243c;
+  }
+  .home-banner h2 svg {
+    margin: 0 10px;
+  }
+  .home-product {
+    width: 100%;
+    padding: 10px;
+  }
+  .home-product img {
+    -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 3px;
+    width: 100%;
+    cursor: pointer;
+  }
+  .home-product img:hover {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+  }
+}
+/*# sourceMappingURL=Home.css.map */

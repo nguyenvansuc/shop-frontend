@@ -1,0 +1,228 @@
+.details {
+  width: 100%;
+  padding: 30px;
+}
+
+.details input::-webkit-outer-spin-button,
+.details input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.details .detailsForm {
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.details .detailsForm .detailsImage {
+  width: 55%;
+}
+
+.details .detailsForm .detailsImage img {
+  width: 100%;
+}
+
+.details .detailsForm .detailsDesc {
+  padding: 15px;
+}
+
+.details .detailsForm .detailsDesc .detailsTitle {
+  font-size: 47px;
+  font-weight: 700;
+}
+
+.details .detailsForm .detailsDesc .detailsDescription {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.details .detailsForm .detailsDesc .detailsDescription span {
+  font-size: 16px;
+}
+
+.details .detailsForm .detailsDesc .detailsPrice {
+  font-size: 26px;
+  font-weight: 600;
+  color: darkred;
+}
+
+.details .detailsForm .detailsDesc .detailsCategory {
+  font-size: 22px;
+}
+
+.details .detailsForm .detailsDesc .detailsNumber {
+  margin: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.details .detailsForm .detailsDesc .detailsNumber button {
+  background-color: black;
+  color: white;
+  border: 0;
+  border-radius: 4px;
+  margin: 0 5px;
+  width: 20px;
+  text-align: center;
+}
+
+.details .detailsForm .detailsDesc .detailsNumber span {
+  font-size: 22px;
+}
+
+.details .detailsForm .detailsDesc .detailsButton {
+  border: 0;
+  background-color: darkred;
+  color: white;
+  font-size: 26px;
+  border-radius: 5px;
+  padding: 5px;
+  width: 200px;
+  text-align: center;
+}
+
+.addressAndPhone {
+  margin-top: 10px;
+}
+
+.addressAndPhone div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.addressAndPhone button {
+  margin-top: 15px;
+  border: 0;
+  background-color: #ccc;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 416px) {
+  .details {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .details input::-webkit-outer-spin-button,
+  .details input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .details .detailsForm {
+    -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 100%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .details .detailsForm .detailsImage {
+    width: 100%;
+  }
+  .details .detailsForm .detailsImage img {
+    width: 100%;
+  }
+  .details .detailsForm .detailsDesc {
+    padding: 16px;
+  }
+  .details .detailsForm .detailsDesc .detailsTitle {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .details .detailsForm .detailsDesc .detailsDescription {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .details .detailsForm .detailsDesc .detailsDescription span {
+    font-size: 12px;
+  }
+  .details .detailsForm .detailsDesc .detailsPrice {
+    font-size: 16px;
+    font-weight: 600;
+    color: darkred;
+  }
+  .details .detailsForm .detailsDesc .detailsCategory {
+    font-size: 12px;
+  }
+  .details .detailsForm .detailsDesc .detailsNumber {
+    margin: 10px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .details .detailsForm .detailsDesc .detailsNumber button {
+    background-color: black;
+    color: white;
+    border: 0;
+    border-radius: 4px;
+    margin: 0 5px;
+    width: 20px;
+    text-align: center;
+  }
+  .details .detailsForm .detailsDesc .detailsNumber span {
+    font-size: 22px;
+  }
+  .details .detailsForm .detailsDesc .detailsButton {
+    border: 0;
+    background-color: darkred;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100px;
+    text-align: center;
+  }
+  .addressAndPhone {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .addressAndPhone div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .addressAndPhone button {
+    margin-top: 15px;
+    border: 0;
+    background-color: #ccc;
+    border-radius: 5px;
+  }
+}
+/*# sourceMappingURL=Details.css.map */

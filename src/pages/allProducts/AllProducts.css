@@ -1,0 +1,29 @@
+.allProducts {
+  margin-top: 50px;
+  width: 90%;
+  margin: 30px auto;
+}
+
+.allProducts .mobileSearchIcon {
+  display: none;
+}
+
+@media only screen and (max-width: 416px) {
+  .allProducts {
+    margin: 0;
+    width: 100%;
+  }
+  .allProducts .mobileSearchIcon {
+    display: block;
+    text-align: end;
+    margin-right: 10px;
+  }
+  .allProducts .mobileSearchIcon span {
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+  }
+  .allProducts .mobileSearchIcon:focus .searchAll {
+    display: block;
+  }
+}
+/*# sourceMappingURL=AllProducts.css.map */

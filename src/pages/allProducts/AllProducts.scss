@@ -1,0 +1,31 @@
+.allProducts {
+  margin-top: 50px;
+  width: 90%;
+  margin: 30px auto;
+  .mobileSearchIcon {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 416px) {
+  .allProducts {
+    margin: 0;
+    width: 100%;
+    .mobileSearchIcon {
+      display: block;
+      text-align: end;
+      margin-right: 10px;
+      span {
+        padding-bottom: 5px;
+        border-bottom: 1px solid black;
+      }
+    }
+    .searchAll {
+      // display: none;
+      // z-index: 9999;
+    }
+    .mobileSearchIcon:focus .searchAll {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,178 @@
+.search div h2 {
+  font-weight: 600;
+  color: #0e243c;
+  font-size: 24px;
+}
+
+.search .searchTitle input {
+  border: 0;
+  border-bottom: 1px solid #0e243c;
+}
+
+.search .searchTitle input:focus {
+  outline: none;
+}
+
+.search .searchTitle span {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.search .searchCategory {
+  margin-top: 20px;
+}
+
+.search .searchCategory button {
+  border: 0;
+  margin: 3px 0;
+  font-size: 18px;
+}
+
+.search .searchCategory button:hover {
+  background-color: #888;
+}
+
+.search .searchCategory p {
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.search .searchCategory p:hover {
+  color: darkred;
+}
+
+.search .searchSale div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.search .searchBut {
+  font-size: 28px;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.search .searchBut:hover {
+  background-color: #555;
+}
+
+.search .searchFilter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search .searchFilter .clearFilter {
+  background-color: #999;
+  cursor: pointer;
+  width: 40%;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.search .searchFilter span {
+  margin-bottom: 15px;
+}
+
+.buttonActive {
+  background-color: darkorange;
+}
+
+@media only screen and (max-width: 416px) {
+  .search {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .search div h2 {
+    display: none;
+  }
+  .search .searchTitle {
+    width: 140px;
+  }
+  .search .searchTitle input {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #0e243c;
+  }
+  .search .searchTitle input:focus {
+    outline: none;
+  }
+  .search .searchTitle span {
+    cursor: pointer;
+    padding: 10px;
+  }
+  .search .searchCategory {
+    margin-top: 0px;
+  }
+  .search .searchCategory button {
+    border: 0;
+    margin: 3px 0;
+    font-size: 14px;
+  }
+  .search .searchCategory button:hover {
+    background-color: #888;
+  }
+  .search .searchCategory p {
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  .search .searchCategory p:hover {
+    color: darkred;
+  }
+  .search .searchSale {
+    display: none;
+  }
+  .search .searchSale div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .search .searchBut {
+    background-color: #bbb;
+    height: 25px;
+    font-size: 16px;
+  }
+  .search .searchBut:focus .search {
+    display: none;
+  }
+  .search .searchFilter {
+    margin-bottom: 5px;
+  }
+  .search .searchFilter h2 {
+    display: none;
+  }
+  .search .searchFilter p {
+    margin-bottom: 0;
+    display: none;
+  }
+  .search .searchFilter span {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+}
+/*# sourceMappingURL=Search.css.map */

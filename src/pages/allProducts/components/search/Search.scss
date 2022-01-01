@@ -1,0 +1,159 @@
+.search {
+  div {
+    h2 {
+      font-weight: 600;
+      color: #0e243c;
+      font-size: 24px;
+    }
+  }
+  .searchTitle {
+    input {
+      border: 0;
+      border-bottom: 1px solid #0e243c;
+    }
+    input:focus {
+      outline: none;
+    }
+    span {
+      cursor: pointer;
+      padding: 10px;
+    }
+  }
+  .searchCategory {
+    margin-top: 20px;
+    // display: flex;
+    // flex-direction: column;
+    button {
+      border: 0;
+      // background-color: transparent;
+      margin: 3px 0;
+      font-size: 18px;
+    }
+    button:hover {
+      background-color: #888;
+    }
+    p {
+      font-size: 18px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    p:hover {
+      color: darkred;
+    }
+  }
+  .searchSale {
+    div {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+  .searchBut {
+    font-size: 28px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  .searchBut:hover {
+    background-color: #555;
+  }
+  .searchFilter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .clearFilter {
+      background-color: #999;
+      cursor: pointer;
+      width: 40%;
+      text-align: center;
+      border-radius: 4px;
+    }
+    span {
+      margin-bottom: 15px;
+    }
+  }
+}
+.buttonActive {
+  background-color: darkorange;
+}
+
+@media only screen and (max-width: 416px) {
+  .search {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    div {
+      h2 {
+        display: none;
+      }
+    }
+    .searchTitle {
+      width: 140px;
+      input {
+        width: 100%;
+        border: 0;
+        border-bottom: 1px solid #0e243c;
+      }
+      input:focus {
+        outline: none;
+      }
+      span {
+        cursor: pointer;
+        padding: 10px;
+      }
+    }
+    .searchCategory {
+      margin-top: 0px;
+      // display: flex;
+      // flex-direction: column;
+      button {
+        border: 0;
+        // background-color: transparent;
+        margin: 3px 0;
+        font-size: 14px;
+      }
+      button:hover {
+        background-color: #888;
+      }
+      p {
+        font-size: 18px;
+        cursor: pointer;
+        font-weight: 500;
+      }
+      p:hover {
+        color: darkred;
+      }
+    }
+    .searchSale {
+      display: none;
+      div {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+    .searchBut {
+      background-color: #bbb;
+      height: 25px;
+      font-size: 16px;
+    }
+    .searchBut:focus .search {
+      display: none;
+    }
+    .searchFilter {
+      // display: none;
+      margin-bottom: 5px;
+      h2 {
+        display: none;
+      }
+      p {
+        margin-bottom: 0;
+        display: none;
+      }
+      span {
+        // display: block;
+        margin-right: 20px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

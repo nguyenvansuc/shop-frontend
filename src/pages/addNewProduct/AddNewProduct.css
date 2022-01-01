@@ -1,0 +1,179 @@
+.addNewProduct {
+  width: 100%;
+}
+
+.addForm {
+  width: 70%;
+  padding: 10px;
+  margin: 50px auto;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 3px;
+}
+
+.addForm h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.addForm div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10px;
+}
+
+.addForm div label {
+  font-size: 22px;
+  font-weight: 500;
+  text-align: start;
+}
+
+.addForm div input {
+  border: 1px solid #888;
+}
+
+.addForm div input:focus {
+  outline: none;
+}
+
+.addForm div textarea:focus {
+  outline: none;
+}
+
+.addForm .addPrice input::-webkit-outer-spin-button,
+.addForm .addPrice input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.addForm .addSale input::-webkit-outer-spin-button,
+.addForm .addSale input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.addForm .addSale input {
+  width: 40%;
+}
+
+.addForm .addCategory select {
+  width: 40%;
+}
+
+.addForm .addImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.addForm .addImage div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.addForm .addImage div input {
+  width: 40%;
+}
+
+.addForm .addImage div img {
+  height: 200px;
+  width: 200px;
+}
+
+@media only screen and (max-width: 416px) {
+  .addNewProduct {
+    width: 100%;
+  }
+  .addForm {
+    width: 90%;
+    padding: 10px;
+    margin: 50px auto;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 3px;
+  }
+  .addForm h1 {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .addForm div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 10px;
+  }
+  .addForm div label {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: start;
+  }
+  .addForm div input {
+    border: 1px solid #888;
+  }
+  .addForm div input:focus {
+    outline: none;
+  }
+  .addForm div textarea:focus {
+    outline: none;
+  }
+  .addForm .addPrice input::-webkit-outer-spin-button,
+  .addForm .addPrice input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .addForm .addSale input::-webkit-outer-spin-button,
+  .addForm .addSale input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .addForm .addSale input {
+    width: 40%;
+  }
+  .addForm .addCategory select {
+    width: 40%;
+  }
+  .addForm .addImage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .addForm .addImage div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .addForm .addImage div input {
+    width: 40%;
+  }
+  .addForm .addImage div img {
+    height: 200px;
+    width: 200px;
+  }
+}
+/*# sourceMappingURL=AddNewProduct.css.map */

@@ -1,0 +1,29 @@
+.footer {
+  background-color: #07080a;
+  padding: 20px;
+}
+
+.footerDetails h2 {
+  color: #17a2b8;
+}
+
+.footerDetails ul {
+  padding: 0;
+}
+
+.footerDetails ul li {
+  margin-top: 10px;
+  list-style-type: none;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.footerDetails ul li span {
+  margin-left: 10px;
+}
+
+.footerDetails ul li:hover {
+  color: darkgoldenrod;
+}
+/*# sourceMappingURL=Footer.css.map */
