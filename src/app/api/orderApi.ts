@@ -4,7 +4,13 @@ import { Order } from '../../interfaces/interface';
 const orderApi = {
   createOrder: async (params: Order) => {
     try {
-      const response = await axiosClient.post('/order/create', params);
+      const token = localStorage.getItem('token');
+      const response = await axiosClient.post('/order/create', params, {
+        headers: {
+          'content-type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+      });
       if (response.data) return response.data;
       return response;
     } catch (error) {

@@ -11,7 +11,7 @@ import { useSelector } from 'react-redux';
 import orderApi from '../../app/api/orderApi';
 import SubmitButton from '../../common/button/SubmitButton';
 import checkAdmin from '../../helpers/checkAdmin';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useRouteMatch } from 'react-router-dom';
 import socketIo from '../../app/socket';
 
 interface Props {}
@@ -26,15 +26,19 @@ const Details = (props: Props) => {
   //   (state: State) => state.detailsProduct.isLoading
   // );
   // const dispatch = useDispatch();
-  console.log(socketIo.id);
+  const match = useRouteMatch();
+  console.log(match);
   const history = useHistory();
   const currentUser = useSelector(
     (state: State) => state.currentUser.currentUser
   );
+  console.log(currentUser?.id, 'xxxxxxxxxxxxxxxxxxxx');
   const checkRulesAdmin = checkAdmin(currentUser);
   console.log(checkRulesAdmin);
   const [addressUser, setAddressUser] = React.useState<string>('');
   const [phoneNumberUser, setPhoneNumberUser] = React.useState<string>('');
+  // console.log(addressUser);
+  // console.log(phoneNumberUser);
   const [note, setNote] = React.useState('');
   // console.log({ addressUser, phoneNumberUser });
   const [turnOnAddress, setTurnOnAddress] = React.useState<boolean>(false);
@@ -136,6 +140,13 @@ const Details = (props: Props) => {
             <button
               className="detailsButton"
               onClick={() => {
+                if (!currentUser) {
+                  history.push({
+                    pathname: '/signIn',
+                    state: { from: match?.url },
+                  });
+                  return;
+                }
                 setTurnOnAddress(!turnOnAddress);
                 // dispatch(getProduct(id));
               }}
@@ -152,6 +163,7 @@ const Details = (props: Props) => {
                     onChange={(e) => {
                       setAddressUser(e.target.value);
                     }}
+                    value={addressUser}
                   />
                 </div>
                 <div className="phoneNumberUser">
@@ -162,6 +174,7 @@ const Details = (props: Props) => {
                     onChange={(e) => {
                       setPhoneNumberUser(e.target.value);
                     }}
+                    value={phoneNumberUser}
                   />
                 </div>
                 <div style={{ color: 'red' }}>{note}</div>

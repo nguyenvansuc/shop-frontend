@@ -1,6 +1,6 @@
 import React from 'react';
 import SubmitButton from '../../common/button/SubmitButton';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import './SignIn.css';
 import userApi from '../../app/api/userApi';
@@ -16,7 +16,8 @@ const SignIn = (props: any) => {
   const [note, setNote] = React.useState<string | null>(null);
   const history = useHistory();
   const { register, handleSubmit } = useForm();
-  console.log(handleSubmit);
+  const location: any = useLocation();
+  console.log(location, 'location');
   const onSubmit = (data: UserSignIn): void => {
     const getUser = async () => {
       const result = await userApi.getUser(data);
@@ -26,6 +27,10 @@ const SignIn = (props: any) => {
         dispatch(
           setCurrentUser({ isSignedIn: true, currentUser: userDecoded })
         );
+        if (location?.state?.from) {
+          history.push(location?.state?.from);
+          return;
+        }
         history.push('/home');
         return;
       }
