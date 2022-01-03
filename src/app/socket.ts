@@ -1,3 +1,3 @@
 import io from 'socket.io-client';
-const socketIo = io('localhost:8900');
+const socketIo = io('https://shop-socket.herokuapp.com/');
 export default socketIo;
