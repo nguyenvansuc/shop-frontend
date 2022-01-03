@@ -1,10 +1,30 @@
-body {
+/* @import '../common/ButtonUI/_button.css'; */
+
+*,
+*::before,
+*::after {
   margin: 0;
+  padding: 0;
+  /* box-sizing: inherit; */
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  letter-spacing: 1.5;
   font-family: 'Oswald', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-family: 'PT Sans', sans-serif;
   font-family: 'Roboto Condensed', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #23232c;
 }
 
 code {

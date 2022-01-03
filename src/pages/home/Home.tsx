@@ -12,6 +12,7 @@ import Banner1 from '../../assets/images/banner1.jpg';
 // import socketIo from '../../app/socket';
 import useCheckAdmin from '../../hooks/useCheckAdmin';
 // import { X } from '../../app/test';
+import axiosClient from '../../app/api/axiosClient';
 
 interface Props {}
 
@@ -61,6 +62,11 @@ const Home = (props: Props) => {
       dispatch(fetchAllProducts({}));
     };
     getAllProducts();
+    const test = async () => {
+      const t = await axiosClient.get('/user/getAllProducts');
+      console.log(t);
+    };
+    test();
   }, [dispatch]);
 
   return (
