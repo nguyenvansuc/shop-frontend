@@ -62,11 +62,6 @@ const Home = (props: Props) => {
       dispatch(fetchAllProducts({}));
     };
     getAllProducts();
-    const test = async () => {
-      const t = await axiosClient.get('/user/getAllProducts');
-      console.log(t);
-    };
-    test();
   }, [dispatch]);
 
   return (
