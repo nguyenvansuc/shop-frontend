@@ -1,11 +1,11 @@
 .card {
   -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
           box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  width: 18rem;
+  width: 100%;
 }
 
 .card img {
-  width: 18rem;
+  width: 100%;
 }
 
 .card .cardBody {
