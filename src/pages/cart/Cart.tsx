@@ -1,7 +1,7 @@
 import React from 'react';
 import orderApi from '../../app/api/orderApi';
 import { Order, State } from '../../interfaces/interface';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useRouteMatch } from 'react-router-dom';
 import './Cart.css';
 import socketIo from '../../app/socket';
 import { useSelector } from 'react-redux';
@@ -9,6 +9,7 @@ import { useSelector } from 'react-redux';
 interface Props {}
 
 const Cart = (props: Props) => {
+  const match = useRouteMatch();
   //   const checkAdmin = useCheckAdmin().checkAdmin;
   //   console.log(checkAdmin, 'admin');
   const currentUser = useSelector(
@@ -126,66 +127,88 @@ const Cart = (props: Props) => {
   }, []);
   return (
     <div className="cart">
-      <div className="cartForm">
-        {listOrders?.map((order) => (
-          <div key={order?._id} style={{ position: 'relative' }}>
-            <div
-              onClick={() => {
-                history.push(`/details/${order?.idProduct}`);
-              }}
-              className="cartDetails"
-            >
-              <div className="cartHeader">
-                <span className="cartProduct">
-                  Product: {order?.titleProduct}
-                </span>
-                <span className="cartUsername">
-                  Username: {order?.username}
-                </span>
-              </div>
-
-              <div className="cartAddress">
-                <span>Address: {order?.addressUser}</span>/
-                <span>Phone Number:{order?.numberPhoneUser}</span>
-              </div>
-
-              <div className="cartFooter">
-                <span>
-                  <span className="cartNumberProduct">
-                    Number: {order?.numberProduct}
-                  </span>
-                  <span className="cartTotalPrice">
-                    Total price:
-                    {totalPrice(order?.numberProduct, order?.priceProduct)}.vnd
-                  </span>
-                </span>
-                <span className="cartStatus">Status: {order?.statusOrder}</span>
-              </div>
-            </div>
-            {currentUser?.rules === 'user' && order?.statusOrder === 'waiting' && (
-              <div
-                className="cartButton"
-                onClick={() => {
-                  deleteOrder(order?._id);
-                }}
-              >
-                Delete
-              </div>
-            )}
-            {currentUser?.rules === 'admin' &&
-              order?.statusOrder === 'waiting' && (
-                <div
-                  className="cartButton"
-                  onClick={() => {
-                    acceptOrder(order?._id, order?.idUser);
-                  }}
-                >
-                  Accept
-                </div>
-              )}
+      {!currentUser ? (
+        <div style={{ fontSize: '32px' }}>
+          <div>You need to be signed in to use the shopping cart!</div>
+          <div
+            style={{ color: 'darkred', fontWeight: '600', cursor: 'pointer' }}
+            onClick={() => {
+              history.push({
+                pathname: '/signIn',
+                state: { from: match?.url },
+              });
+              return;
+            }}
+          >
+            Go to Sign In
           </div>
-        ))}
-      </div>
+        </div>
+      ) : (
+        <div className="cartForm">
+          {listOrders?.map((order) => (
+            <div key={order?._id} style={{ position: 'relative' }}>
+              <div
+                onClick={() => {
+                  history.push(`/details/${order?.idProduct}`);
+                }}
+                className="cartDetails"
+              >
+                <div className="cartHeader">
+                  <span className="cartProduct">
+                    Product: {order?.titleProduct}
+                  </span>
+                  <span className="cartUsername">
+                    Username: {order?.username}
+                  </span>
+                </div>
+
+                <div className="cartAddress">
+                  <span>Address: {order?.addressUser}</span>/
+                  <span>Phone Number:{order?.numberPhoneUser}</span>
+                </div>
+
+                <div className="cartFooter">
+                  <span>
+                    <span className="cartNumberProduct">
+                      Number: {order?.numberProduct}
+                    </span>
+                    <span className="cartTotalPrice">
+                      Total price:
+                      {totalPrice(order?.numberProduct, order?.priceProduct)}
+                      .vnd
+                    </span>
+                  </span>
+                  <span className="cartStatus">
+                    Status: {order?.statusOrder}
+                  </span>
+                </div>
+              </div>
+              {currentUser?.rules === 'user' &&
+                order?.statusOrder === 'waiting' && (
+                  <div
+                    className="cartButton"
+                    onClick={() => {
+                      deleteOrder(order?._id);
+                    }}
+                  >
+                    Delete
+                  </div>
+                )}
+              {currentUser?.rules === 'admin' &&
+                order?.statusOrder === 'waiting' && (
+                  <div
+                    className="cartButton"
+                    onClick={() => {
+                      acceptOrder(order?._id, order?.idUser);
+                    }}
+                  >
+                    Accept
+                  </div>
+                )}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

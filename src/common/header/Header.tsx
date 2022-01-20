@@ -94,6 +94,7 @@ const Header = (props: Props) => {
             <span
               onClick={() => {
                 history.push('/cart');
+                return;
               }}
             >
               Cart

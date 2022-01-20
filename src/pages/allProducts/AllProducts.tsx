@@ -44,7 +44,7 @@ const AllProducts = (props: Props) => {
         <Col md={18} xs={24}>
           <Row>
             {isLoading && (
-              <span>
+              <span style={{ fontSize: '32px' }}>
                 <FiLoader />
                 loading......
               </span>
