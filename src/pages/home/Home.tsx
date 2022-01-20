@@ -11,6 +11,7 @@ import { useHistory } from 'react-router-dom';
 import Banner1 from '../../assets/images/banner1.jpg';
 // import socketIo from '../../app/socket';
 import useCheckAdmin from '../../hooks/useCheckAdmin';
+import { FiLoader } from 'react-icons/fi';
 // import { X } from '../../app/test';
 // import axiosClient from '../../app/api/axiosClient';
 
@@ -37,6 +38,7 @@ const Home = (props: Props) => {
   const allProducts = useSelector(
     (state: State) => state.allProducts.listProducts
   );
+  const isLoading = useSelector((state: State) => state.allProducts.isLoading);
   console.log(allProducts);
   const dispatch = useDispatch();
   const sliceListClothes = (allProducts: Product[]) => {
@@ -80,18 +82,29 @@ const Home = (props: Props) => {
           <BsStarFill />
         </h2>
         <Row>
-          {sliceListClothes(allProducts).map((product) => (
-            <Col md={6} xs={12} key={product._id}>
-              <div
-                onClick={() => {
-                  history.push(`/details/${product._id}`);
-                }}
-                className="home-product"
-              >
-                <img style={{ width: '100%' }} src={product?.imageUrl} alt="" />
-              </div>
-            </Col>
-          ))}
+          {isLoading ? (
+            <div style={{ fontSize: '40px' }}>
+              <FiLoader />
+              Loading......
+            </div>
+          ) : (
+            sliceListClothes(allProducts).map((product) => (
+              <Col md={6} xs={12} key={product._id}>
+                <div
+                  onClick={() => {
+                    history.push(`/details/${product._id}`);
+                  }}
+                  className="home-product"
+                >
+                  <img
+                    style={{ width: '100%' }}
+                    src={product?.imageUrl}
+                    alt=""
+                  />
+                </div>
+              </Col>
+            ))
+          )}
         </Row>
       </div>
       <div className="home-banner">
@@ -101,18 +114,29 @@ const Home = (props: Props) => {
           <BsStarFill />
         </h2>
         <Row>
-          {sliceListShoes(allProducts).map((product) => (
-            <Col md={6} xs={12} key={product._id}>
-              <div
-                className="home-product"
-                onClick={() => {
-                  history.push(`/details/${product._id}`);
-                }}
-              >
-                <img style={{ width: '100%' }} src={product?.imageUrl} alt="" />
-              </div>
-            </Col>
-          ))}
+          {isLoading ? (
+            <div style={{ fontSize: '40px' }}>
+              <FiLoader />
+              Loading......
+            </div>
+          ) : (
+            sliceListShoes(allProducts).map((product) => (
+              <Col md={6} xs={12} key={product._id}>
+                <div
+                  className="home-product"
+                  onClick={() => {
+                    history.push(`/details/${product._id}`);
+                  }}
+                >
+                  <img
+                    style={{ width: '100%' }}
+                    src={product?.imageUrl}
+                    alt=""
+                  />
+                </div>
+              </Col>
+            ))
+          )}
         </Row>
       </div>
     </div>
