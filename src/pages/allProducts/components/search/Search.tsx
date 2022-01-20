@@ -57,6 +57,7 @@ const Search = (props: Props) => {
         <h2>Category :</h2>
         {listButtonCategory.map((buttonCategory) => (
           <button
+            style={{ margin: '0 3px', padding: '0 2px', borderRadius: '5px' }}
             value={buttonCategory.value}
             onClick={(e) => {
               getCategory(e);
