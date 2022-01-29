@@ -27,7 +27,7 @@ const Details = (props: Props) => {
   // );
   // const dispatch = useDispatch();
   const a=2;
-  console.log(a,'b')
+  console.log(a)
   const match = useRouteMatch();
   console.log(match);
   const history = useHistory();
