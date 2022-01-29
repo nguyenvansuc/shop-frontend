@@ -26,6 +26,8 @@ const Details = (props: Props) => {
   //   (state: State) => state.detailsProduct.isLoading
   // );
   // const dispatch = useDispatch();
+  const a=2;
+  console.log(a)
   const match = useRouteMatch();
   console.log(match);
   const history = useHistory();
