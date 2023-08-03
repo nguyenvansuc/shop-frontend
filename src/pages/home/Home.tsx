@@ -42,6 +42,7 @@ const Home = (props: Props) => {
   console.log(allProducts);
   const dispatch = useDispatch();
   const sliceListClothes = (allProducts: Product[]) => {
+    if(!allProducts) return []
     const newList = allProducts.filter(
       (product) =>
         product.category === 'jeans' || product.category === 't-shirt'
@@ -49,6 +50,7 @@ const Home = (props: Props) => {
     return newList.slice(0, 6);
   };
   const sliceListShoes = (allProducts: Product[]) => {
+    if(!allProducts) return []
     const newList = allProducts.filter(
       (product) =>
         product.category === 'vans' || product.category === 'converse'
